@@ -8,4 +8,7 @@
 
 
 ### Sample API's are 
-1. 
+1. **POST**  http://localhost:8080/api/products/addProduct
+2. **GET** 
+
+   
