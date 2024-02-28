@@ -1,10 +1,15 @@
-# Create REST API using Nodejs , Express as middleware , Sequelize ORM and Mysql DataBase 
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white)
+
+# REST API using Nodejs , Express as middleware , Sequelize ORM and Mysql DataBase 
 
 ## Install Dependencies 
-  > npm install
+  >** npm install**
 
 ## Run application 
-  > npm run dev
+  > **npm run dev**
 
 
 ### Sample API's are 
