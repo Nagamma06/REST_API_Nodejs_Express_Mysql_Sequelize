@@ -1,0 +1,39 @@
+1. npm init
+2. npm install --save express sequelize cors mysql2 nodemon (production level)
+3. cors: (cross-origin resourcesharing) cross origin access to all of the clients . it is nodejs mechanism by which a front-end client can make requests for resources to an external backend server.
+3. npm install -D nodemon
+
+
+Edit package.json
+1. add type:"module"
+2. script: start: "node server.js"
+   dev :" nodemon server.js"
+3. run : npm run dev
+
+API'S
+...............
+1. POST  http://localhost:8080/api/products/addProduct
+    {
+  "title": "legion pro latop",
+  "price": 850,
+  "description": "awesome pro laptop",
+  "published": false
+  }
+
+
+2. GET http://localhost:8080/api/products/allProducts
+
+3. GET http://localhost:8080/api/products/published
+
+4. GET http://localhost:8080/api/products/1  --> single product
+
+5. PUT http://localhost:8080/api/products/1
+     {
+  "title": "iphone 12 updated",
+  "price": 345,
+  "description": "awesome mobile updated",
+  "published": true
+   }
+
+6. DELETE http://localhost:8080/api/products/3
+
