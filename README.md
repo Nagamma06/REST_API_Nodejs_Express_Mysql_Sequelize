@@ -39,6 +39,27 @@
    >  ![image](https://github.com/Nagamma06/REST_API_Nodejs_Express_Mysql_Sequelize/assets/64766095/99996315-475f-4bcd-b311-7d3e01f4fe9b)
 
 
+# User Registration and Login using JWT token
+## Use bcrypt.js package for encryption and cookie-parser package for handling cookies.
+   ### Install following packages
+    > **npm i bcryptjs**
+    > **npm i jsonwebtoken**
+    > **npm i cookie-parser**
+  ### Import and Use above packages
+    #### Encrypt the password before saving the user information into DB
+    > **import bcrypt from 'bcryptjs';**
+    > **await bcrypt.hash(password,10)**
+    #### Generate the JWT token 
+    > **import jwt from 'jsonwebtoken';**
+    > **let token = jwt.sign(
+            {id:user.id, email:user.email},
+            process.env.jwtsecret,
+            {
+                expiresIn:"2h"
+            }
+        );**
+
     
+   
 
    
