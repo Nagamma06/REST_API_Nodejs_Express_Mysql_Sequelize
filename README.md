@@ -54,7 +54,14 @@
          await bcrypt.compare(password, user.password)
          
       3. Generate the JWT token and send the token to user cookie 
+         import express from 'express';
+         import cookieParser from 'cookie-parser';
          import jwt from 'jsonwebtoken'
+
+         const app = express();
+         //middleware
+         app.use(cookieParser());
+
          
          let token = jwt.sign(
             {id:user.id, email:user.email},
