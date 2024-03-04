@@ -42,22 +42,22 @@
 # User Registration and Login using JWT token
 ## Use bcrypt.js package for encryption and cookie-parser package for handling cookies.
    ### Install following packages
-    > **npm i bcryptjs**
-    > **npm i jsonwebtoken**
-    > **npm i cookie-parser**
+    >  npm i bcryptjs
+       npm i jsonwebtoken
+       npm i cookie-parser
   ### Import and Use above packages
-    #### Encrypt the password before saving the user information into DB
-    > **import bcrypt from 'bcryptjs';**
-    > **await bcrypt.hash(password,10)**
-    #### Generate the JWT token 
-    > **import jwt from 'jsonwebtoken';**
-    > **let token = jwt.sign(
+    > 1. Encrypt the password before saving the user information into DB
+         import bcrypt from 'bcryptjs'
+         await bcrypt.hash(password,10)
+      2. Generate the JWT token 
+         import jwt from 'jsonwebtoken'
+         let token = jwt.sign(
             {id:user.id, email:user.email},
             process.env.jwtsecret,
             {
                 expiresIn:"2h"
             }
-        );**
+          );
 
     
    
