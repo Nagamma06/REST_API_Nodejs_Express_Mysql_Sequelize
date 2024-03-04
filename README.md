@@ -49,8 +49,13 @@
       1. Encrypt the password before saving the user information into DB
          import bcrypt from 'bcryptjs'
          await bcrypt.hash(password,10)
-      2. Generate the JWT token 
+
+      2. Match the password while login 
+         await bcrypt.compare(password, user.password)
+         
+      3. Generate the JWT token and send the token to user cookie 
          import jwt from 'jsonwebtoken'
+         
          let token = jwt.sign(
             {id:user.id, email:user.email},
             process.env.jwtsecret,
@@ -59,6 +64,32 @@
             }
           );
 
+          const options ={
+                expires: new Date(Date.now()+3 *24*60*60*1000),
+                httpOnly: true , // makes cookies secure, only server can manipulate cookies.
+               }
+
+               res.status(200).cookie("token", user.token,options).json({success:true,token:user.token,user:user})
+               
+  ## Register and Login API's
+
+   1. **POST** : Register a user
+
+      > ![image](https://github.com/Nagamma06/REST_API_Nodejs_Express_Mysql_Sequelize/assets/64766095/2e8c9c48-0be0-4c9e-b949-865e912afa3c)
+
+   2. **GET** : Login with email and password
+
+      > ![image](https://github.com/Nagamma06/REST_API_Nodejs_Express_Mysql_Sequelize/assets/64766095/de7e54de-b918-4120-8636-df6523b4c632)
+
+      **Cookie is set with Token at Client**
+
+      > ![image](https://github.com/Nagamma06/REST_API_Nodejs_Express_Mysql_Sequelize/assets/64766095/693f61b7-e28a-45de-94b8-e6fdaa766fbd)
+
+      
+
+
+          
+      
     
    
 
