@@ -97,7 +97,7 @@ const userLogin = async(req, res) => {
                 httpOnly: true , // makes cookies secure, only server can manipulate cookies.
                }
 
-               res.status(200).cookie("token", user.token,options).json({success:true,token:user.token,user:user})
+               res.status(200).cookie("token", user.token,options).json({success:true,token:user.token,email:user.email})
       }
 
    } catch (error) {
