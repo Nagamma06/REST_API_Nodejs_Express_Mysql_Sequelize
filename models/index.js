@@ -4,6 +4,7 @@ import { Sequelize,DataTypes} from 'sequelize';
 
 import Product from './productModel.js';
 import Review from './reviewModel.js';
+import User from './userModel.js';
 
 config.config();
 
@@ -53,6 +54,7 @@ config.config();
     
     db.products = Product(sequelize,DataTypes)
     db.reviews = Review(sequelize,DataTypes)
+    db.users  = User(sequelize,DataTypes)
 
     db.sequelize.sync({force:false})
     .then(()=>{
