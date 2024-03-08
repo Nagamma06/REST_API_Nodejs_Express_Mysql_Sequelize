@@ -3,8 +3,8 @@ import cors from 'cors';
 import router from './routes/productRouter.js';
 import userRouter from './routes/userRouter.js';
 
-
 import cookieParser from 'cookie-parser';
+
 
 const app = express();
 //app.use(cors);
@@ -20,7 +20,7 @@ app.use(cookieParser());
 //routers
 app.use('/api/products', router);
 app.use('/api/users', userRouter.router);
-
+//app.use('/api/dashboard', dashboardRouter.router);
 //testing api
 
 app.get('/',(req, res) => {

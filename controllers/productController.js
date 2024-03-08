@@ -25,6 +25,7 @@ const addProduct = async(req, res)=>{
 //2. get all products
 
 const getAllProducts = async(req, res)=>{
+    console.log(req.cookies)
 
    /*let products = await Product.findAll({
     attributes:['title','price']
